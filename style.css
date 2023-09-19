@@ -1,6 +1,47 @@
-body, html, *{
+body,
+html,
+* {
     font-size: 10px;
     box-sizing: border-box;
     margin: 0;
     padding: 0
+}
+
+.title {
+    font-size: 5rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.container {
+    width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem auto;
+}
+
+.card {
+    width: 28%;
+    background-color: red;
+    justify-content: space-around;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+
+.card-image {
+    width: 80%;
+}
+
+.card-title {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+
+.card-description {
+    font-size: 1.2rem;
 }
