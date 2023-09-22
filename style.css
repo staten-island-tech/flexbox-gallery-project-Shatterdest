@@ -25,17 +25,17 @@ html,
 }
 
 .card {
-    width: 28%;
+    width: 22%;
     background-color: rgba(0, 0, 0, 0.08);
     justify-content: space-around;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin: 2rem auto;
     flex-basis: auto;
-    border: rgba(0, 0, 0) solid 5px;
+    border: rgba(0, 0, 0) solid 3px;
     border-radius: 20px;
     transition: 0.2s all;  
 }
@@ -61,4 +61,23 @@ html,
 
     font-size: 2rem;
     margin: 1rem 1rem;
+}
+
+#spin:hover {
+    transform: rotate(360000000000000000000deg);
+    transition: 2s all;
+}
+
+#matrix:hover {
+    transform: matrix(1, 2, 3, 4, 5, 6);
+    transition: 0.5s all;    
+}
+
+#wide:hover {
+    transform: scale(5, 0.1);
+    transition: 0.5s all;
+}
+
+#wheel:hover {
+    
 }
