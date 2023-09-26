@@ -64,31 +64,61 @@ html,
 }
 
 #spin:hover {
-    transform: rotate(360000000000000000000deg);
-    transition: 2s all;
+    transform: rotate(720deg);
+    transition: 5s all;
 }
 
-#matrix:hover {
-    transform: matrix(1, 2, 3, 4, 5, 6);
-    transition: 0.5s all;
+#spin:hover .card-title {
+    transform: rotate(-720deg);
+    transition: 5s all;
+}
+
+#spin:hover .card-description {
+    transform: rotate(-720deg);
+    transition: 5s all;
+}
+
+
+#fade:hover {
+    animation: fadeOut 2s;
 }
 
 #wide:hover {
-    transform: scale(5, 0.1);
-    transition: 0.5s all;
+    transform: scale(2, 0.5);
+    transition: 10s all;
+}
+
+#wide:hover .card-image {
+    transform: scale(0.1, 5);
+    transition: 10s all;
 }
 
 #wheel:hover {
-    animation: wheeley 5s infinite;
+    animation: wheeley 5s ease-in forwards
+}
+
+#wheel:hover #wheel-image {
+    transition: 17s all;
+    transform: rotate(1000deg);
 }
 
 
 @keyframes wheeley {
     from {
-        transform: rotate(0deg) translate(0, 0);
+        transform: translate(0, 0);
     }
 
     to {
-        transform: rotate(360deg) translateX(200%);
+        transform: translateX(200%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+
+    to {
+        opacity: 0.1;
     }
 }
