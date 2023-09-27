@@ -25,6 +25,7 @@ html,
 }
 
 .card {
+    position: relative;
     width: 22%;
     background-color: rgba(0, 0, 0, 0.08);
     justify-content: space-around;
@@ -38,6 +39,7 @@ html,
     border: rgba(0, 0, 0) solid 3px;
     border-radius: 20px;
     transition: 0.2s all;
+    z-index: 100;
 }
 
 .card:hover {
@@ -51,8 +53,7 @@ html,
 
 .card-title {
     background-color: rgba(29, 124, 5, 0);
-
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin-top: 1rem;
 }
 
@@ -81,6 +82,11 @@ html,
 
 #fade:hover {
     animation: fadeOut 2s;
+}
+
+#fade:hover :not(.card-image){
+    opacity: 100;
+    animation: none;
 }
 
 #wide:hover {
@@ -119,6 +125,16 @@ html,
     }
 
     to {
-        opacity: 0.1;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
     }
 }
